@@ -9,10 +9,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //val intent = Intent(this , MyJobIntentService::class.java )
-        val intent = Intent(this , NormalService::class.java )
+        val intent = Intent(this , MyJobIntentService::class.java )
+        //val intent = Intent(this , NormalService::class.java )
 
         startService(intent)
+
+        MyJobIntentService.enqueueWork(this , intent)
     }
 
     override fun onDestroy() {

@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <service android:name=".NormalService"/>
-        <service android:name=".MyJobIntentService"/>
+        <service android:name=".MyJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
     </application>
 
 </manifest>
